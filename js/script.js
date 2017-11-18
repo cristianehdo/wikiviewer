@@ -3,13 +3,14 @@
 // };
 var form = document.getElementById('form');
 var searchField = document.getElementById('searchText');
-searchField.addEventListener('submit', () => {
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
   fetchResult(searchField.value);
 });
 
 var fetchResult = (text) => {
-  const url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=' + text + '&format=json&callback=?';
-
+  const url = 'https://en.wikipedia.org/w/api.php?action=opensearch&srsearch=' + text + '&format=json&callback=?';
+https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=brazil&format=json&callback=?
   fetch(url)
   .then(response => response.json())
   .then((data) => {
