@@ -1,5 +1,3 @@
-@import url(card.css);
-
 .centered {
     margin: 0 auto;
     text-align: center;
@@ -8,12 +6,6 @@
     padding-right: 0px;
     /*padding-left: 0px;*/
     }
-div#content {
-    height: 900px;
-    width: 90%;
-    background-color: lightgrey;
-/*    border: none;*/
-}
 div#header {
     padding-top: 100px;
     height: 30%;
@@ -25,15 +17,29 @@ div#wikilogo {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-div#searchBox {
-    height: 40px;
-    width: 500px;
-}
-input[type=text] {
-    height: 33px;
-    width: 100%;
-    text-align: left;
-    padding-left: 10px;
 
+.card {
+  height: 105px;
+  border: 1px solid #F1F4F6;
+  border-shadow: 0 1px 3px lightgrey;
+  background-color: white;
+  color: grey;
+  text-align: left;
+  padding: 20px;
+  margin: 5px;
+  position: relative;
 }
 
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover {
+  opacity: 0.1;
+}
