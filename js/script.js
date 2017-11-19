@@ -1,8 +1,17 @@
 
 var displayResults = (results) => {
+  var resultBox = document.getElementById("articleBox");
   let counter = 0;
   let indexMax = results[1].length;
-  results[1][counter];
+  for (i = 0; i < indexMax; i++) {
+    results[1][counter];
+    let title = results[1][counter];
+    let description = results[2][counter];
+    let link = results[3][counter];
+    let content = '<div class="card"><a href=' + link + '>' + title + '</a><p>' + description + '</p></div>';
+    resultBox.insertAdjacentHTML("beforeend", content);
+    counter += 1;
+  }
 };
 
 var fetchResult = (text) => {
