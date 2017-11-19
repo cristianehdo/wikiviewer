@@ -1,11 +1,13 @@
+@import url(card.css);
+
 .centered {
     margin: 0 auto;
     text-align: center;
 }
-.paddingless {  
+.paddingless {
     padding-right: 0px;
     /*padding-left: 0px;*/
-    }    
+    }
 div#content {
     height: 900px;
     width: 90%;
@@ -25,13 +27,13 @@ div#wikilogo {
 }
 div#searchBox {
     height: 40px;
-    width: 500px;   
+    width: 500px;
 }
 input[type=text] {
     height: 33px;
     width: 100%;
     text-align: left;
     padding-left: 10px;
-    
+
 }
 

@@ -8,7 +8,7 @@ var displayResults = (results) => {
     let title = results[1][counter];
     let description = results[2][counter];
     let link = results[3][counter];
-    let content = '<div class="card"><a href=' + link + '>' + title + '</a><p>' + description + '</p></div>';
+    let content = '<div class="card"><a class="card-link" href=' + link + ' target="_blank"></a><h4>' + title + '</h4><p>' + description + '</p></div>';
     resultBox.insertAdjacentHTML("beforeend", content);
     counter += 1;
   }
