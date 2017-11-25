@@ -1,6 +1,9 @@
 
 var displayResults = (results) => {
   var resultBox = document.getElementById("articleBox");
+  while (resultBox.firstChild) {
+    resultBox.removeChild(resultBox.firstChild);
+  }
   let counter = 0;
   let indexMax = results[1].length;
   for (i = 0; i < indexMax; i++) {
@@ -31,4 +34,5 @@ var searchField = document.getElementById('searchText');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   fetchResult(searchField.value);
+  searchField.value = "";
 });
